@@ -1,0 +1,3 @@
+R  Print full path
+    readlink -f %f
+

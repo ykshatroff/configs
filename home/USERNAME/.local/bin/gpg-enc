@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ "x$1" = "x" ]; then
+    echo "Usage: $0 file [encrypted-file]"
+    exit 1
+fi
+
+encrypted="$2"
+if [ "x$encrypted" = "x" ]; then
+    encrypted="$1.encrypted"
+fi
+
+echo "Encrypting '$1' to '$encrypted'"
+
+gpg --output "$encrypted" --symmetric --cipher-algo AES256 "$1"
+
+echo "To decrypt, use:"
+echo "  gpg --output '$1' --decrypt '$encrypted'"
