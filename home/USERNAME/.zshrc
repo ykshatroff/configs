@@ -69,7 +69,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker-compose git nvm pyenv)
+plugins=(docker-compose git nvm pyenv zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,3 +106,4 @@ alias dcm=docker-compose
 alias fac=". ~/.local/share/virtualenvs/fabric/bin/activate"
 
 alias ansvp="export ANSIBLE_VAULT_PASSWORD_FILE=$(pwd)/.vault-passwd"
+alias np='npx pretty-quick && npm run lint'
