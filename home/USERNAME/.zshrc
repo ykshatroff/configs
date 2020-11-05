@@ -107,3 +107,8 @@ alias fac=". ~/.local/share/virtualenvs/fabric/bin/activate"
 
 alias ansvp="export ANSIBLE_VAULT_PASSWORD_FILE=$(pwd)/.vault-passwd"
 alias np='npx pretty-quick && npm run lint'
+alias drmi='docker images -a|grep none |awk '"'"'{print $3}'"'"'|xargs docker rmi -f'
+# h - repeat history with fuzzy search enabled through FZF
+h() {
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
+}
