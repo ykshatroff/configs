@@ -1,0 +1,18 @@
+StatusBar=Disabled
+
+[Desktop Entry]
+DefaultProfile=Profile 3.profile
+
+[Favorite Profiles]
+Favorites=
+
+[MainWindow]
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+ShowPasteUnprintableWarning=true
+
+[TabBar]
+CloseTabButton=None
+TabBarPosition=Top
